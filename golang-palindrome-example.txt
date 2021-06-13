@@ -1,0 +1,44 @@
+package main
+
+import (
+"fmt"
+)
+
+func main() {
+
+var userinput interface{}
+
+//fmt.Scan(&userinput)  
+userinput=23
+switch value:=userinput.(type) {
+ case int:	
+		temp:=userinput.(int)
+		var rem,rev int
+		for temp>0 {
+			rem=temp%10
+			rev=rev*10+rem
+			temp=temp/10
+			}
+		if rev==userinput{
+			fmt.Println("palindrome")
+		}else{
+			fmt.Println("not palindrome")
+		}
+case string:
+		var flag bool
+		flag=true
+		value=userinput.(string)
+		for i:=0;i<len(value)/2;i++{
+		j:=len(value)-1-i
+		if value[i]!=value[j]{ flag=false
+		
+	}  }
+	
+	if flag{
+	fmt.Println("yes")
+	} else{
+	fmt.Println("no")
+}
+}
+
+}
